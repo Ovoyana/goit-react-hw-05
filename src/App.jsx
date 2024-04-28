@@ -1,7 +1,7 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import { lazy } from "react";
-// import Layout from "./Layout/Layout";
+import Layout from "./Layout/Layout";
 
 const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
 const MoviesPage = lazy(() => import("./pages/MoviesPage/MoviesPage"));
@@ -16,7 +16,7 @@ const NotFoundPage = lazy(() => import("./pages/NotFoundPage/NotFoundPage"));
 
 export default function App() {
   return (
-   
+   <Layout>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="movies" element={<MoviesPage />} />
@@ -26,6 +26,6 @@ export default function App() {
         </Route>
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
-   
+      </Layout>
   );
 }

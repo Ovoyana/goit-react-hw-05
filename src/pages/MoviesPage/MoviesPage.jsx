@@ -53,7 +53,7 @@ export default function MoviesPage  ()  {
           </button>
         </Form>
       </Formik>
-      <MovieList moviesList={searchMovies} />
+      <MovieList gallery={searchMovies} />
     </>
   );
 };
