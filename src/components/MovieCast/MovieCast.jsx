@@ -24,16 +24,16 @@ export default function MovieCast  ()  {
         return (
           <li className={css.item} key={actor.id}>
             {
-              <>
-                <img
+              <div className={css.about}>
+                <img className={css.img}
                   src={`https://image.tmdb.org/t/p/w200${actor.profile_path}`}
                   alt={`${actor.name} photo`}
                 />
                 <div className={css.info}>
                   <h4 className={css.name}>{actor.name}</h4>
-                  <p>{actor.character}</p>
+                  <p className={css.character}>{actor.character}</p>
                 </div>
-              </>
+              </div>
             }
           </li>
         );

@@ -1,24 +1,28 @@
-import { NavLink } from 'react-router-dom';
-import style from './Navigation.module.css';
+import { NavLink, Outlet } from 'react-router-dom';
+import css from './Navigation.module.css';
 import clsx from 'clsx';
+import { Suspense } from "react";
 
-
+const navigationClass = ({ isActive }) => {
+  return clsx(css.navLink, isActive && css.active);
+};
 export default function  Navigation  ()  {
-  const navigationClass = ({ isActive }) => {
-    return clsx(style.navLink, isActive && style.navLinkActive);
-  };
 
   return (
-    <header className={style.container}>
-      <nav className={style.headerNav}>
+    <div>
+    <header className={css.box}>
+      
         <NavLink className={navigationClass} to="/">
           Home
         </NavLink>
         <NavLink className={navigationClass} to="/movies">
           Movies
         </NavLink>
-      </nav>
     </header>
+    <Suspense fallback="Loading...">
+        <Outlet />
+      </Suspense>
+    </div>
   );
 };
 

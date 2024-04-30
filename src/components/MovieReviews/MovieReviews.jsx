@@ -21,7 +21,7 @@ export default function MovieReviews  ()  {
   return (
     <div>
       {reviews.length > 0 ? (
-        <ul className={css.reviews_list}>
+        <ul className={css.list}>
           {reviews.map((review) => {
             return (
               <li key={review.id}>

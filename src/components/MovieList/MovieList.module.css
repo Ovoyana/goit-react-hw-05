@@ -1,0 +1,20 @@
+.list {
+    margin: 5px 5px  20px 5px;
+    padding: 15px 20px 30px 50px;
+    color: chocolate;
+  }
+  .item {
+    color: coral;
+    font-weight: bold;
+    
+  }
+  .link {
+    font-size: 20px;
+    color: bisque;
+    transition-duration: 200ms;
+    margin-left: 10px;
+  }
+  
+  .link:hover {
+    color: coral;
+  }

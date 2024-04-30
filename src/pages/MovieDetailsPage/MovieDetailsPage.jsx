@@ -25,7 +25,7 @@ export default function MovieDetailsPage () {
       <Link className={css.btn} to={goBackURLRef.current}>
         Go Back
       </Link>
-      <div className={css.wrapper}>
+      <div className={css.box}>
         <img
           src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
           alt={`preview of ${movie.title}`}

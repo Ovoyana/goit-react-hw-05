@@ -20,7 +20,7 @@ export default function HomePage  () {
 
   return (
     <>
-      <MovieList gallery={movies} movies={movies} />
+      <MovieList  movies={movies} />
     </>
   );
 };

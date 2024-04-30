@@ -1,0 +1,26 @@
+.box {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    border-bottom: 3px solid crimson;
+    padding: 8px;
+    background-color: bisque;
+    margin-bottom: 15px;
+  }
+  
+  .navigationClass {
+    font-size: 25px;
+    font-weight: bold;
+    color: forestgreen;
+    transition-duration: 200ms;
+  }
+  
+  .navigationClass {
+    color: violet;
+  }
+  
+  .active {
+    color: crimson;
+  }
