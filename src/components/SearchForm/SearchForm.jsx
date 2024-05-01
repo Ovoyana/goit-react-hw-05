@@ -4,17 +4,17 @@ import toast, { Toaster } from "react-hot-toast";
 
 export default function SearchForm({ onSubmit }) {
   const handleSubmit = (values, actions) => {
-    const formattedSearch = values.search.trim().toLowerCase();
+    const searchRule = values.search.trim().toLowerCase();
     if (!values.search.trim()) {
           toast.error("Please enter a correct search term!");
           return;
         }
 
-        onSubmit(formattedSearch);
+        onSubmit(searchRule);
         actions.resetForm();
       }
       return (
-        <div>
+        <div className={css.box}>
           <Formik className={css.wrapper} initialValues={{ search: '' }} onSubmit={handleSubmit}>
             <Form className={css.form}>
               <Field className={css.search}

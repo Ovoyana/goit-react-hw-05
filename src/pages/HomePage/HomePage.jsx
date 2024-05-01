@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { fetchMovies } from "../../movies";
+import css from "../HomePage/HomePage.module.css"
 
 import MovieList from "../../components/MovieList/MovieList";
 
@@ -20,6 +21,8 @@ export default function HomePage  () {
 
   return (
     <>
+    <h2 className={css.title}>Trending today</h2>
+
       <MovieList  movies={movies} />
     </>
   );

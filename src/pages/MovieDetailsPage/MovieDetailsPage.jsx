@@ -41,8 +41,8 @@ export default function MovieDetailsPage () {
             <p className={css.overview_text}>{movie.overview}</p>
           </div>
           <div>
-            <h3>Genres</h3>
-            <ul>
+            <h3 className={css.genres_title}>Genres</h3>
+            <ul className={css.list}>
               {movie.genres?.map((genre) => {
                 return (
                   <li key={genre.id}>

@@ -40,8 +40,10 @@ export default function MoviesPage  ()  {
     setQuery(newMovie);
 }
 
+
+
 return (
-  <div>
+  <div >
       <SearchForm onSubmit={handleSearch} />
       {error && <ErrorMessage />}
       {isLoading && <Loader />}
